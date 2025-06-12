@@ -7,7 +7,8 @@ body {
 }
 
 .logo-img {
-	width: 20vh;
+	width: 25vw;
+	max-width: 160px;
 }
 
 ul,
@@ -17,9 +18,43 @@ a {
 	list-style-type: none;
 }
 
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	position: relative;
+	background-color: #262525;
+}
+
+.hamburger {
+	display: none;
+	cursor: pointer;
+	font-size: 2rem;
+	color: #ffffff;
+}
+
+.hamburger span {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #ffffff;
+	border-radius: 2px;
+}
+
+.nav-menu {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 .nav-link {
 	color: #ffffff;
 }
+
 .project-link {
 	color: #783535;
 }
@@ -40,22 +75,6 @@ a {
 .project-link:hover {
 	color: #783535;
 	text-decoration: underline;
-}
-
-.navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 60px;
-}
-
-.nav-menu {
-	display: flex;
-	align-items: center;
-	gap: 50px;
-	list-style: none;
-	margin: 0;
-	padding: 0;
 }
 
 .nav-menu li {
@@ -130,16 +149,24 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 100px;
+	gap: 50px;
 	padding: 60px 20px;
 	flex-wrap: wrap;
+	text-align: center;
+}
+
+.experiencie-picture img {
+	width: 100%;
+	height: auto;
+	max-width: 300px;
+	border-radius: 10px;
 }
 
 .profile-summary-text {
 	font-size: 1.8rem;
 	font-weight: 700;
-	line-height: 0.5;
-	margin-bottom: 8px;
+	line-height: 1.2;
+	max-width: 600px;
 }
 
 .profile-summary-text p {
@@ -149,11 +176,6 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-experiencie-picture {
-	position: relative;
-	height: auto;
-	overflow: hidden;
 }
 
 .point {
@@ -306,25 +328,21 @@ experiencie-picture {
 
 .info-column {
 	margin: 5vh;
-
-
 }
-.language-item, .webinar-item{
+
+.language-item,
+.webinar-item {
 	margin: 10px;
 	display: flex;
 	justify-content: center;
 }
-
 
 .language-item span {
 	float: right;
 	color: #b3b3b3;
 	font-size: 0.85rem;
 	margin-left: 5vh;
-	
 }
-
-
 
 .education-column h3 span {
 	color: #7b2d2d;
@@ -338,13 +356,21 @@ experiencie-picture {
 
 .education-item strong {
 	font-weight: bold;
-	color: #ffffff;
+	color: #fff;
 }
 
 .education-item span {
 	float: right;
 	color: #b3b3b3;
 	font-size: 0.85rem;
+	margin-left: 5vh;
+}
+
+.education-item small {
+	display: block;
+	color: #aaa;
+	font-size: 0.85rem;
+	margin-top: 2px;
 }
 
 .projetos {
@@ -352,6 +378,7 @@ experiencie-picture {
 	flex-direction: column;
 	padding: 40px;
 }
+
 .project-links {
 	display: flex;
 	margin: 50px;
@@ -371,7 +398,6 @@ experiencie-picture {
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-wrap: wrap;
-	display: flex;
 	padding: 40px;
 }
 
@@ -410,51 +436,6 @@ experiencie-picture {
 	padding: 5px;
 }
 
-.education-lists {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 60px;
-	justify-content: center;
-}
-
-.education-column {
-	max-width: 300px;
-}
-
-.education-column h3 {
-	font-size: 1.1rem;
-	margin-bottom: 15px;
-	color: #fff;
-}
-
-.education-column h3 span {
-	color: #7b2d2d;
-	border-bottom: 2px solid #7b2d2d;
-	padding-bottom: 2px;
-}
-
-.education-item {
-	margin-bottom: 15px;
-}
-
-.education-item strong {
-	font-weight: bold;
-	color: #fff;
-}
-
-.education-item span {
-	float: right;
-	color: #b3b3b3;
-	font-size: 0.85rem;
-	margin-left: 5vh;
-}
-
-.education-item small {
-	display: block;
-	color: #aaa;
-	font-size: 0.85rem;
-	margin-top: 2px;
-}
 .skills-section {
 	display: block;
 	justify-content: center;
@@ -462,16 +443,108 @@ experiencie-picture {
 }
 
 .skills-list {
-	 text-align: center;
-	  
+	text-align: center;
 }
 
 .skills-section p {
-  margin-bottom: 10px;
-  line-height: 1.6;
-  color: #ccc;
+	margin-bottom: 10px;
+	line-height: 1.6;
+	color: #ccc;
 }
 
 .skills-section strong {
-  color: #ffffff;
+	color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+	.profile-summary {
+		flex-direction: column;
+		gap: 40px;
+		text-align: center;
+		padding: 40px 20px;
+	}
+
+	.profile-summary-text {
+		font-size: 1.4rem;
+		line-height: 1.2;
+	}
+
+	.profile-summary-text p {
+		font-size: 1.1rem;
+	}
+
+	.logo-img {
+		width: 30vw;
+	}
+
+	.nav-menu li:not(:first-child)::before {
+		width: 0px;
+		height: 0px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hamburger {
+		display: block;
+		position: relative;
+		z-index: 1001;
+	}
+
+	.nav-menu {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		background-color: #1e1e1e;
+		border-radius: 10px;
+		padding: 15px 20px;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+		text-align: left;
+		margin-top: 10px;
+	}
+
+	.nav-menu.show {
+		display: flex;
+	}
+
+	.nav-menu li {
+		margin: 10px 0;
+	}
+
+	.profile-summary {
+		flex-direction: column;
+		gap: 30px;
+		padding: 40px 20px;
+	}
+
+	.profile-summary-text {
+		font-size: 1.5rem;
+	}
+
+	.experiencie-picture img {
+		max-width: 70vw;
+	}
+	.nav-menu li:not(:first-child)::before {
+		width: 0px;
+		height: 0px;
+	}
+}
+
+@media (max-width: 600px) {
+	.logo-img {
+		width: 45vw;
+	}
+
+	.profile-summary-text {
+		font-size: 1.2rem;
+	}
+
+	.profile-summary-text p {
+		font-size: 1rem;
+	}
+	.nav-menu li:not(:first-child)::before {
+		width: 0px;
+		height: 0px;
+	}
 }
